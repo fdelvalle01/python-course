@@ -1,6 +1,6 @@
-# Verificacion de Tweets 
+# Verificacion de Tweets
 
-# Este programa solicita al usuario que ingrese un tweet y verifica si cumple con el limite de 20 caracteres. 
+# Este programa solicita al usuario que ingrese un tweet y verifica si cumple con el limite de 20 caracteres.
 
 tweet = input("Ingrese el tweet ")
 
@@ -11,4 +11,3 @@ if tweet != "":
         print("Ha sobrepasado el limite de su publicacion.")
 else:
     print("No se puede publciar un twwt vacio")
-    

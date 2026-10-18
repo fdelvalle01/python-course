@@ -26,8 +26,8 @@ Las operaciones son suma, multi, div y resta""")
 
 resultado = ""
 
-while True: 
-    if not resultado: 
+while True:
+    if not resultado:
         resultado = input("Ingrese numero: ")
         if resultado.lower() == "salir":
             break
@@ -35,12 +35,12 @@ while True:
     op = input("Ingresa operacion: ")
     if op.lower() == "salir":
         break
-    #Ahora debemos preguntarle el siguiente numero al usuario
+    # Ahora debemos preguntarle el siguiente numero al usuario
 
     n2 = input("Ingresa el siguiente numero: ")
     if n2.lower() == "salir":
         break
-    n2  = int(n2)
+    n2 = int(n2)
 
     if op.lower() == "suma":
         resultado += n2
@@ -55,4 +55,3 @@ while True:
         break
 
     print(f"El resultado es: {resultado}")
-
