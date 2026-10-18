@@ -14,9 +14,12 @@ Las operaciones son USD, EUR, MXN""")
 # 1 USD = 20.28 MXN
 # 1 EUR = 21.36 MXN
 
-resultado_usd = 0
-resultado_mxn = 0
-resultado_eur = 0
+
+tasa_USD_a_EUR = 0.95
+tasa_USD_a_MXN = 20.28
+tasa_EUR_a_MXN = 21.36
+
+
 cantidad = ""
 
 while True:
@@ -24,23 +27,26 @@ while True:
         cantidad = input("Ingrese Cantidad: ")
         if cantidad.lower() == "salir":
             break
-        cantidad = int(cantidad)
+        cantidad = float(cantidad)
     op = input("Ingresa divisa: ")
     if op.lower() == "salir":
         break
 
     if op.lower() == "usd":
-        resultado_eur = cantidad * 0.95
-        resultado_mxn = cantidad * 20.28
-        print(f"{resultado_eur} EUR, {resultado_mxn} MXN")
+        resultado_eur = cantidad * tasa_USD_a_EUR
+        resultado_mxn = cantidad * tasa_USD_a_MXN
+        print(f"{resultado_eur:.2f} EUR, {resultado_mxn:.2f} MXN")
     if op.lower() == "eur":
-        resultado_usd = cantidad / 0.95
-        resultado_mxn = cantidad * 21.36
-        print(f"{resultado_usd} USD, {resultado_mxn} MXN")
+        resultado_usd = cantidad / tasa_USD_a_EUR
+        resultado_mxn = cantidad * tasa_USD_a_MXN
+        print(f"{resultado_usd:.2f} USD, {resultado_mxn:.2f} MXN")
     if op.lower() == "mxn":
-        resultado_usd = cantidad / 20.28
-        resultado_eur = cantidad / 21.36
-        print(f"{resultado_usd} USD, {resultado_eur} EUR")
+        resultado_usd = cantidad / tasa_USD_a_MXN
+        resultado_eur = cantidad / tasa_EUR_a_MXN
+        print(f"{resultado_usd:.2f} USD, {resultado_eur:.2f} EUR")
     else:
         print("Operacion no valida")
         break
+
+
+# :.2f esto sirve para mostrar exactamente el numero con 2 decimables dentro de un f-String en python

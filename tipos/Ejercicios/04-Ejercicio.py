@@ -1,4 +1,4 @@
-# Formateador de nombres 
+# Formateador de nombres
 
 # primer_nombre = input("First Name: ")
 # segundo_nombre = input("Second Name: ")
@@ -15,13 +15,14 @@
 # print(nombre_completo)
 
 ##############################################################
-# pro code 
+# pro code
 
 primer_nombre = input("¿Cual es tu primer nombre? ").strip().capitalize()
 segundo_nombre = input("¿Cual es tu segundo nombre? ").strip().capitalize()
 primer_apellido = input("¿Cual es tu primer apellido? ").strip().capitalize()
 segundo_apellido = input("¿Cual es tu segundo nombre? ").strip().capitalize()
 
-NOMBRE_COMPLETO = f"{primer_nombre} {segundo_nombre} {primer_apellido} {segundo_apellido}".replace("  ", " ")
+NOMBRE_COMPLETO = f"{primer_nombre} {segundo_nombre} {primer_apellido} {segundo_apellido}".replace(
+    "  ", " ")
 
 print(NOMBRE_COMPLETO)
